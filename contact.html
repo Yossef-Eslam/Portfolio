@@ -63,7 +63,19 @@
         input[type="submit"]:hover {
             background-color: #27ae60;
         }
+        .success-message {
+            display: none;
+            color: #2ecc71;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
+    
 </head>
 <body>
     <nav>
@@ -78,11 +90,39 @@
     <a class="button" href="https://www.facebook.com/share/19KcMnq5Ut/" target="_blank"><i class="fab fa-facebook"></i> فيسبوك</a>
     <a class="button" href="https://www.linkedin.com/in/yossef-eslam-158094305" target="_blank"><i class="fab fa-linkedin"></i> لينكدإن</a>
 
-    <form action="https://formspree.io/f/mrbqqqaq?redirect=https://yossef-eslam.github.io/Portfolio/thanks.html" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/mrbqqqaq" method="POST">
         <input type="text" name="name" placeholder="الاسم" required>
         <input type="email" name="email" placeholder="البريد الإلكتروني" required>
         <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
         <input type="submit" value="إرسال">
     </form>
+
+    <div class="success-message" id="success-message">✔️ تم إرسال رسالتك بنجاح! سأرد عليك قريبًا.</div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                
+    successMessage.style.display = 'block';
+    successMessage.style.animation = 'fadeIn 1s ease-in-out';
+    new Audio("https://cdn.pixabay.com/download/audio/2022/10/03/audio_1992f9f10f.mp3?filename=success-fanfare-trumpets-6185.mp3").play();
+    
+            }
+        });
+    </script>
 </body>
 </html>
