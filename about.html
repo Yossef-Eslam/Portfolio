@@ -33,6 +33,29 @@
             padding: 20px;
             border-radius: 10px;
         }
+    
+        .section {
+            animation: fadeInUp 1s ease-in-out;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            animation: fadeInDown 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -78,5 +101,10 @@
         </ul>
     </div>
 
-</body>
+
+    <audio id="welcomeSound" autoplay>
+        <source src="https://cdn.pixabay.com/download/audio/2023/03/04/audio_d2a683d1f5.mp3?filename=interface-124464.mp3" type="audio/mpeg">
+    </audio>
+    </body>
+    
 </html>
