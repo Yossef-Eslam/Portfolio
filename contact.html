@@ -1,116 +1,158 @@
-
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
-<meta charset="utf-8"/>
-<title>تواصل معي | يوسف إسلام</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            margin: 0;
-            background: linear-gradient(to bottom right, #f1f2f6, #dff9fb);
-            color: #2c3e50;
-            direction: rtl;
-        }
-        header {
-            background-color: #130f40;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin-top: 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #130f40;
-            background-color: #dff9fb;
-            padding: 10px 20px;
-            border-radius: 8px;
-            margin: 5px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #130f40;
-            color: white;
-        }
-        .contact {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-family: 'Cairo', sans-serif;
-        }
-        button {
-            background-color: #130f40;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        button:hover {
-            background-color: #1e3799;
-        }
-        footer {
-            background-color: #130f40;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>تواصل معي | يوسف إسلام</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #74b9ff, #a29bfe);
+      color: #2d3436;
+      direction: rtl;
+    }
+
+    header {
+      background: linear-gradient(to left, #6c5ce7, #341f97);
+      color: white;
+      padding: 30px 10px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #341f97;
+      background-color: #dfe6e9;
+      padding: 12px 25px;
+      border-radius: 30px;
+      margin: 5px;
+      display: inline-block;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #341f97;
+      color: white;
+    }
+
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 550px;
+      margin: 0 auto;
+      background: #ffffffcc;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    form h2 {
+      color: #341f97;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      text-align: right;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #341f97;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6c5ce7;
+    }
+
+    footer {
+      background-color: #341f97;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    .fa {
+      margin-left: 8px;
+    }
+  </style>
 </head>
 <body>
+
 <header>
-<h1>تواصل معي</h1>
+  <h1><i class="fas fa-envelope"></i> تواصل معي</h1>
 </header>
+
 <nav>
-<a href="index.html">الرئيسية</a>
-<a href="about.html">من أنا</a>
-<a href="contact.html">تواصل معي</a>
+  <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+  <a href="about.html"><i class="fas fa-user"></i> من أنا</a>
+  <a href="contact.html"><i class="fas fa-envelope-open"></i> تواصل معي</a>
 </nav>
+
 <div class="contact">
-<form action="https://formspree.io/f/mrbqqqaq" method="POST">
-<label>الاسم</label>
-<input name="name" required="" type="text"/>
-<label>البريد الإلكتروني</label>
-<input name="email" required="" type="email"/>
-<label>الرسالة</label>
-<textarea name="message" required="" rows="5"></textarea>
-<button type="submit">إرسال</button>
-</form>
+  <form action="https://formspree.io/f/mrbqqqaq" method="POST">
+    <h2>أرسل رسالة الآن</h2>
+    <label for="name">الاسم</label>
+    <input id="name" name="name" type="text" required placeholder="اكتب اسمك هنا" />
+
+    <label for="email">البريد الإلكتروني</label>
+    <input id="email" name="email" type="email" required placeholder="example@email.com" />
+
+    <label for="message">الرسالة</label>
+    <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+
+    <button type="submit"><i class="fas fa-paper-plane"></i> إرسال</button>
+  </form>
 </div>
+
 <footer>
-<p>جميع الحقوق محفوظة © 2025</p>
+  <p>© 2025 يوسف إسلام - جميع الحقوق محفوظة</p>
 </footer>
+
 <script>
-document.querySelector("form").addEventListener("submit", function(e) {
+  document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = this;
-    form.innerHTML = "<h2>تم إرسال رسالتك بنجاح، شكراً لتواصلك!</h2><p>سيتم تحويلك إلى الصفحة الرئيسية خلال 3 ثوانٍ...</p>";
+    form.innerHTML = "<h2>✅ تم إرسال رسالتك بنجاح!</h2><p>سيتم تحويلك إلى الصفحة الرئيسية خلال 3 ثوانٍ...</p>";
     setTimeout(() => {
-        window.location.href = 'index.html';
+      window.location.href = 'index.html';
     }, 3000);
-});
-</script></body>
+  });
+</script>
+
+</body>
 </html>
