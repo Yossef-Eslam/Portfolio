@@ -147,10 +147,26 @@
   document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = this;
-    form.innerHTML = "<h2>✅ تم إرسال رسالتك بنجاح!</h2><p>سيتم تحويلك إلى الصفحة الرئيسية خلال 3 ثوانٍ...</p>";
-    setTimeout(() => {
-      window.location.href = 'index.html';
-    }, 3000);
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.innerHTML = "<h2>✅ تم إرسال رسالتك بنجاح!</h2><p>سيتم تحويلك إلى الصفحة الرئيسية خلال 3 ثوانٍ...</p>";
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 3000);
+      } else {
+        form.innerHTML = "<h2>حدث خطأ أثناء الإرسال. حاول مرة أخرى.</h2>";
+      }
+    }).catch(() => {
+      form.innerHTML = "<h2>تعذر الاتصال بالخادم. حاول لاحقًا.</h2>";
+    });
   });
 </script>
 
