@@ -23,16 +23,6 @@
       text-align: center;
       font-size: 24px;
       letter-spacing: 1px;
-      position: relative;
-    }
-
-    header img {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
     }
 
     nav {
@@ -57,23 +47,44 @@
       color: white;
     }
 
-    .about {
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
+    }
+
+    .about-image {
+      flex: 1;
+      max-width: 300px;
+      margin: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      flex: 2;
+      max-width: 600px;
       background: #ffffffcc;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
-    .about h2 {
+    .about-text h2 {
       color: #341f97;
       margin-bottom: 20px;
     }
 
-    .about p {
+    .about-text p {
       font-size: 18px;
-      line-height: 1.7;
+      margin-bottom: 10px;
+      line-height: 1.8;
     }
 
     footer {
@@ -88,23 +99,36 @@
 <body>
 
 <header>
-  <img src="profile_icon.jpg" alt="صورة يوسف">
-  <h1>من أنا</h1>
+  <h1><i class="fas fa-user"></i> من أنا</h1>
 </header>
 
 <nav>
   <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
-  <a href="about.html"><i class="fas fa-user"></i> من أنا</a>
   <a href="contact.html"><i class="fas fa-envelope-open"></i> تواصل معي</a>
 </nav>
 
-<div class="about">
-  <h2>يوسف إسلام - مهندس نظم ومعلومات</h2>
-  <p>
-    أنا مهندس نظم ومعلومات شغوف بمجال تطوير البرمجيات وتصميم المواقع. أتممت دراستي في كلية الحاسبات والمعلومات، ولدي خبرة عملية في مجالات مختلفة تشمل تطوير الويب، إدارة قواعد البيانات، وتحليل الأنظمة.
-    <br><br>
-    أتمتع بمهارات قوية في HTML، CSS، JavaScript، وأيضاً تعامل جيد مع أدوات التصميم مثل Figma. أبحث دائماً عن فرص جديدة لتحسين نفسي وتقديم حلول تقنية فعّالة.
-  </p>
+<div class="about-section">
+  <div class="about-image">
+    <img src="profile_icon.jpg" alt="صورتي" />
+  </div>
+  <div class="about-text">
+    <h2>يوسف إسلام</h2>
+    <p><strong>الموقع:</strong> القاهرة – مصر</p>
+    <p><strong>البريد الإلكتروني:</strong> yossefeslameltokhy@gmail.com</p>
+    <p><strong>رقم الهاتف:</strong> 01155625203</p>
+    <hr />
+    <p><strong>المهارات:</strong> Linux، Microsoft Office، Oracle Database</p>
+    <p><strong>الشهادات:</strong></p>
+    <ul>
+      <li>CEH – Certified Ethical Hacker</li>
+      <li>OSCP – Offensive Security Certified Professional</li>
+      <li>Pentation Tester – American Board</li>
+      <li>Oracle Database Programming SQL</li>
+      <li>Oracle Java Foundational</li>
+      <li>Oracle Database Design and Foundation</li>
+      <li>Microsoft Technology Associate Database Administration Fundamentals</li>
+    </ul>
+  </div>
 </div>
 
 <footer>
