@@ -117,7 +117,14 @@
             if (response.ok) {
                 form.reset();
                 
+    
     successMessage.style.display = 'block';
+    successMessage.style.animation = 'fadeIn 1s ease-in-out';
+    new Audio("https://cdn.pixabay.com/download/audio/2022/10/03/audio_1992f9f10f.mp3?filename=success-fanfare-trumpets-6185.mp3").play();
+    setTimeout(() => {
+        window.location.href = 'index.html';
+    }, 3000);
+    
     successMessage.style.animation = 'fadeIn 1s ease-in-out';
     new Audio("https://cdn.pixabay.com/download/audio/2022/10/03/audio_1992f9f10f.mp3?filename=success-fanfare-trumpets-6185.mp3").play();
     
